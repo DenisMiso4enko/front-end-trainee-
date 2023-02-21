@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <div class="shape-left">
+      <img src="./assets/shape-left.svg" alt="shape" />
+    </div>
+    <div class="shape-right">
+      <img src="./assets/shape-right.svg" alt="shape" />
+    </div>
+    <div class="container">
+      <main class="main">
+        <div class="logo">
+          <img src="./assets/Group.svg" alt="logo" />
+        </div>
+
+        <div class="text">
+          <h1>Under Construction</h1>
+          <p>We're making lots of improvements and will be back soon</p>
+        </div>
+
+        <div class="countdown" id="countdown">
+          <div class="time">
+            <h2 id="days" class="time__number">00</h2>
+            <div class="time__text" id="daysText">Days</div>
+          </div>
+
+          <div class="separator">:</div>
+
+          <div class="time">
+            <h2 id="hours" class="time__number">00</h2>
+            <div class="time__text" id="hoursText">Hours</div>
+          </div>
+
+          <div class="separator">:</div>
+
+          <div class="time">
+            <h2 id="minutes" class="time__number">00</h2>
+            <div class="time__text" id="minutesText">Minutes</div>
+          </div>
+
+          <div class="separator">:</div>
+
+          <div class="time">
+            <h2 id="seconds" class="time__number">00</h2>
+            <div class="time__text" id="secondsText">Seconds</div>
+          </div>
+        </div>
+
+        <div class="action">
+          <p>Check our event page when you wait:</p>
+          <a href="#" target="_blank"
+            ><button class="btn-rounded btn-link">Go to the event</button></a
+          >
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__container wrapper">
+          <form class="form">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter your Email and get notified"
+              required
+              name="e-mail"
+              pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$"
+            />
+            <button type="submit" class="btn-send">
+              <img src="./assets/arrow-right.svg" alt="" />
+            </button>
+          </form>
+          <a href="#events" class="btn-event">Other Events</a>
+        </div>
+      </footer>
+    </div>
+
+    <section class="section-events" id="events">
+      <div class="events-container wrapper">
+        <h1 class="events-title">All events</h1>
+        <div class="accordion">
+          <!-- 1 -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-1">
+              <div class="accordion__head-title">
+                <h1 class="head-title"><span>Hawaiian party</span> 01</h1>
+              </div>
+            </div>
+            <div class="accordion__content hidden" id="tab-1">
+              <div class="content-left">
+                <span class="content-left__number">01</span>
+                <h3 class="content-left__title">Hawaiian party</h3>
+                <p class="content-left__text">13.02.2023</p>
+                <a href="#" target="_blank"
+                  ><button class="content-left__btn">
+                    More information
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-2">
+              <div class="accordion__head-title">
+                <h1 class="head-title"><span>Мafia party</span> 02</h1>
+              </div>
+            </div>
+            <div class="accordion__content hidden" id="tab-2">
+              <div class="content-left">
+                <span class="content-left__number">02</span>
+                <h3 class="content-left__title">Hawaiian party</h3>
+                <p class="content-left__text">13.02.2023</p>
+                <button class="content-left__btn">More information</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-3">
+              <div class="accordion__head-title">
+                <h1 class="head-title"><span>Party</span> 03</h1>
+              </div>
+            </div>
+            <div class="accordion__content hidden" id="tab-3">
+              <div class="content-left">
+                <span class="content-left__number">03</span>
+                <h3 class="content-left__title">Hawaiian party</h3>
+                <p class="content-left__text">13.02.2023</p>
+                <button class="content-left__btn">More information</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-4">
+              <div class="accordion__head-title">
+                <h1 class="head-title"><span>Party on the beach</span> 04</h1>
+              </div>
+            </div>
+            <div class="accordion__content hidden" id="tab-4">
+              <div class="content-left">
+                <span class="content-left__number">04</span>
+                <h3 class="content-left__title">Hawaiian party</h3>
+                <p class="content-left__text">13.02.2023</p>
+                <button class="content-left__btn">More information</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-5">
+              <div class="accordion__head-title">
+                <h1 class="head-title"><span>Hawaiian party</span> 05</h1>
+              </div>
+            </div>
+            <div class="accordion__content hidden" id="tab-5">
+              <div class="content-left">
+                <span class="content-left__number">05</span>
+                <h3 class="content-left__title">Home Security</h3>
+                <p class="content-left__text">13.02.2023</p>
+                <button class="content-left__btn">More information</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-6">
+              <div class="accordion__head-title">
+                <h1 class="head-title">
+                  <span>Network Design & Implementation</span> 06
+                </h1>
+              </div>
+            </div>
+            <div class="accordion__content hidden" id="tab-6">
+              <div class="content-left">
+                <span class="content-left__number">06</span>
+                <h3 class="content-left__title">Hawaiian party</h3>
+                <p class="content-left__text">13.02.2023</p>
+                <button class="content-left__btn">More information</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-7">
+              <div class="accordion__head-title">
+                <h1 class="head-title">
+                  <span>System Design & Engineering</span> 07
+                </h1>
+              </div>
+            </div>
+            <div class="accordion__content hidden" id="tab-7">
+              <div class="content-left">
+                <span class="content-left__number">07</span>
+                <h3 class="content-left__title">Hawaiian party</h3>
+                <p class="content-left__text">13.02.2023</p>
+                <button class="content-left__btn">More information</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-8">
+              <div class="accordion__head-title">
+                <h1 class="head-title"><span>Client Care Plans</span> 08</h1>
+              </div>
+            </div>
+            <div class="accordion__content hidden" id="tab-8">
+              <div class="content-left">
+                <span class="content-left__number">08</span>
+                <h3 class="content-left__title">Hawaiian party</h3>
+                <p class="content-left__text">13.02.2023</p>
+                <button class="content-left__btn">More information</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,286 @@
+.section-events {
+  min-height: 100vh;
+}
+.events-container {
+  @include flex-column-center;
+  gap: 40px;
+  min-height: 100vh;
+  @media (max-width: 769px) {
+    padding-top: 46px;
+  }
+  @media (max-width: 360px) {
+    padding-top: 59px;
+  }
+}
+
+.events-title {
+  @include section-title;
+  animation: inherit;
+}
+
+.accordion {
+  display: flex;
+  height: 682px;
+  gap: 4px;
+  @media (max-width: 769px) {
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+
+    @media (max-width: 769px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__head {
+    position: relative;
+    @include flex-column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 85px;
+    color: $color-white;
+    margin-top: auto;
+    border-right: 2px solid $color-white;
+    padding-bottom: 20px;
+    @media (max-width: 769px) {
+      display: block;
+      height: 85px;
+      width: 688px;
+      padding-bottom: initial;
+      padding-left: 36px;
+      border-right: inherit;
+    }
+    @media (max-width: 360px) {
+      display: block;
+      height: 64px;
+      width: 320px;
+      padding-left: 20px;
+    }
+
+    cursor: pointer;
+
+    background: $color-blue;
+    border-bottom: 2px solid $color-red;
+    &:not(.active) {
+      background: url('./assets/team.jpg') no-repeat;
+      background-position: center;
+      @media (max-width: 769px) {
+        background-size: cover;
+      }
+    }
+    &:not(.active)::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      background: transparent;
+      background-image: linear-gradient(
+        180deg,
+        rgba(22, 44, 78, 0) 0%,
+        #162c4e 100%
+      );
+      @media (max-width: 769px) {
+        background-image: linear-gradient(
+          -90deg,
+          rgba(22, 44, 78, 0) 0%,
+          #162c4e 100%
+        );
+      }
+    }
+  }
+
+  &__content {
+    width: 995px;
+    background: url('./assets/team.jpg') no-repeat;
+    transition: max-width 0.9s ease-in-out;
+    border-bottom: 2px solid $color-red;
+    @media (max-width: 769px) {
+      width: 688px;
+      height: 0;
+      background-position: center;
+      background-size: cover;
+      transition: initial;
+      transition: height 0.9s ease-in-out;
+    }
+
+    &.active {
+      max-width: 995px;
+      opacity: 1;
+      @media (max-width: 769px) {
+        width: 688px;
+        height: 400px;
+      }
+      @media (max-width: 360px) {
+        width: 320px;
+      }
+    }
+
+    & .content-left {
+      max-width: 364px;
+      height: 100%;
+      @media (max-width: 769px) {
+        max-width: 100%;
+        display: block;
+        margin-top: 206px;
+        height: 192px;
+      }
+    }
+  }
+}
+
+.accordion__head-title {
+  position: relative;
+  z-index: 2;
+  color: $color-white;
+  @media (max-width: 769px) {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+}
+.head-title {
+  @include flex-column;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  & span {
+    writing-mode: vertical-rl;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+  }
+
+  @media (max-width: 769px) {
+    flex-direction: row-reverse;
+    align-items: center;
+    font-size: 24px;
+    & span {
+      writing-mode: horizontal-tb;
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    font-size: 18px;
+    flex-direction: row-reverse;
+    align-items: center;
+    & span {
+      font-size: 18px;
+      writing-mode: horizontal-tb;
+    }
+  }
+}
+
+.content-left {
+  position: relative;
+  max-width: 0;
+  @include flex-column;
+  justify-content: flex-end;
+  padding: 50px 42px;
+
+  backdrop-filter: blur(20px);
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(20px);
+
+  overflow: hidden;
+
+  @media (max-width: 769px) {
+    padding: 25px 40px;
+  }
+
+  @media (max-width: 360px) {
+    padding: 24px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    color: $color-white;
+    margin-bottom: 12px;
+    @media (max-width: 769px) {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 360px) {
+      font-size: 16px;
+    }
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.8);
+
+    margin-bottom: 25px;
+    @media (max-width: 769px) {
+      font-size: 16px;
+      margin-bottom: 29px;
+    }
+    @media (max-width: 360px) {
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+  }
+  &__number {
+    position: absolute;
+    top: 0;
+    left: -130px;
+
+    font-weight: 600;
+    font-size: 380px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: rgba(255, 255, 255, 0.04);
+
+    @media (max-width: 769px) {
+      font-size: 152px;
+
+      left: initial;
+      right: -20px;
+    }
+    @media (max-width: 360px) {
+      font-size: 80px;
+    }
+  }
+
+  &__btn {
+    padding: 20px 56px;
+    border: 2px solid $color-white;
+    background: transparent;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    border-left: 7px solid $color-white;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-blue;
+    }
+    @media (max-width: 769px) {
+      font-size: 16px;
+      padding: 12px 24px;
+    }
+  }
+}
+
+.hidden {
+  max-width: 0;
+  opacity: 0;
+}

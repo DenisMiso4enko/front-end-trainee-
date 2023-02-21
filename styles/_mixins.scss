@@ -1,0 +1,28 @@
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin section-title {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 104%;
+  text-transform: uppercase;
+  text-align: center;
+
+  animation: slidein 1s;
+
+  color: #162c4e;
+
+  opacity: 0.39;
+  @media (max-width: 769px) {
+    font-size: 36px;
+  }
+}
