@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  position: relative;
+  // position: relative;
 }
 
 .wrapper {
@@ -38,6 +38,7 @@
 .main {
   padding-top: 60px;
   @include flex-column-center;
+  flex-grow: 1;
 }
 .logo {
   margin-bottom: 93px;
@@ -189,9 +190,9 @@
 .footer {
   background: $color-blue;
   padding: 45px 0;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
+  // position: absolute;
+  // width: 100%;
+  // bottom: 0;
 }
 
 .footer__container {
